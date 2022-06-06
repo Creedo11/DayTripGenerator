@@ -55,8 +55,3 @@ print(f"We have selected {random_destination} for you. Is this good?")
 def user_selected_destination(list_of_denstenations):
     for destination in list_of_denstenations
         if destination == "Cape Verd":
-
-
-
-
-            
