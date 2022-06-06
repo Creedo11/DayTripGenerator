@@ -47,3 +47,16 @@ def random_value(lists):
     return entertainment_option
 
 random_entertainment_option = random_value(list_of_entertainment_options)
+
+print("Welcome to your day trip generator where we'll help confirm your next desired getaway! If you aren't sure what you'd like to do for your getaway, you've come to the right place!")
+print(f"We have selected {random_destination} for you. Is this good?")
+
+
+def user_selected_destination(list_of_denstenations):
+    for destination in list_of_denstenations
+        if destination == "Cape Verd":
+
+
+
+
+            
