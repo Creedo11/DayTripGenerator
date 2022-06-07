@@ -16,7 +16,7 @@
 destinations = ["Cape Verde", "Japan", "Las Vegas", "South Africa"]
 restaurants = ["Steakhouse", "Sushi", "Hibachi", "Soul Food"]
 transportation_modes =["Ariplane Flight", "Rental Car", "Train", "Private Jet"]
-list_of_entertainment_options = ["Sky Diving", "City Tour", "Local Cuisine Cooking Class", "Casino Expierence"]
+entertainment_options = ["Sky Diving", "City Tour", "Local Cuisine Cooking Class", "Casino Expierence"]
 
 
 
@@ -53,10 +53,10 @@ random_transportation_mode = random_value(transportation_modes)
 
 # # random entertainment option generator
 def random_value(lists):
-    entertainment_option = (random.choice(list_of_entertainment_options))
+    entertainment_option = (random.choice(entertainment_options))
     return entertainment_option
 
-random_entertainment_option = random_value(list_of_entertainment_options)
+random_entertainment_option = random_value(entertainment_options)
 
 
 
@@ -98,7 +98,7 @@ while user_response == "No":
         user_response = input("Enter Yes/No: ")
 
 print(f"Great, {random_destination_selected} is waiting on you! Next, we'll chose your mode of transportation.")
-
+print(" ")
 
 
 
@@ -139,7 +139,7 @@ while user_response == "No":
         user_response = input("Enter Yes/No: ")
 
 print(f"Awesome, a {random_trans_selected} is a great way to travel. Next, we'll chose a place for you to dine.")
-
+print(" ")
 
 
 
@@ -180,4 +180,45 @@ while user_response == "No":
         user_response = input("Enter Yes/No: ")
 
 print(f"Nice! The locals always suggest a good {random_res_selected} restaurant. Lastly, we'll chose an activity for you to enjoy.")
+print(" ")
 
+
+
+
+# entertainment selection
+print(f"We have selected a {random_entertainment_option} activity for you. Is this okay?")
+user_response = input("Enter Yes/No: ")
+
+random_ent_one = "Sky Diving"
+random_ent_two = "City Tour"
+random_ent_three = "Local Cuisine Cooking Class"
+random_ent_four = "Casino Expierence"
+random_ent_selected = (random_entertainment_option)
+
+
+while user_response == "No":
+    if user_response == "Yes":
+        break
+    if random_ent_selected == random_ent_one:
+        entertainment_options.remove(random_ent_selected)
+        random_ent_selected = random.choice(entertainment_options)
+        print(f"Ahhh okay. What about {random_ent_selected}?")
+        user_response = input("Enter Yes/No: ")
+    elif random_ent_selected == random_ent_two:
+        entertainment_options.remove(random_ent_selected)
+        random_ent_selected = random.choice(entertainment_options)
+        print(f"Ahhh okay. What about {random_ent_selected}?")
+        user_response = input("Enter Yes/No: ")
+    elif random_ent_selected == random_ent_three:
+        entertainment_options.remove(random_ent_selected)
+        random_ent_selected = random.choice(entertainment_options)
+        print(f"Ahhh okay. What about {random_ent_selected}?")
+        user_response = input("Enter Yes/No: ")
+    elif random_ent_selected == random_ent_four:
+        entertainment_options.remove(random_ent_selected)
+        random_ent_selected = random.choice(entertainment_options)
+        print(f"Ahhh okay. What about {random_ent_selected}?")
+        user_response = input("Enter Yes/No: ")
+
+print(f"A {random_ent_selected} activity should be fun! Now let's go ahead and confirm your selections.")
+print(" ")
