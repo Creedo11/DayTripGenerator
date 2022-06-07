@@ -15,7 +15,7 @@
 # list of trip options
 destinations = ["Cape Verde", "Japan", "Las Vegas", "South Africa"]
 restaurants = ["ABS Steakhouse", "ABC Sushi", "ABC Hibachi", "ABC Soul Food Joint"]
-transportation_modes =["Ariplane Flight", "Rental Car", "Train", "Boat"]
+transportation_modes =["Ariplane Flight", "Rental Car", "Train", "Private Jet"]
 list_of_entertainment_options = ["Sky Diving", "City Tour", "Local Cuisine Cooking Class", "Casino Expierence"]
 
 import random
@@ -28,18 +28,18 @@ def random_value(lists):
 random_destination = random_value(destinations)
 
 # # random restaurant generator
-# def random_value(lists):
-#     restaurant = (random.choice(restaurants)) 
-#     return restaurant
+def random_value(lists):
+    restaurant = (random.choice(restaurants)) 
+    return restaurant
 
-# random_restaurant = random_value(restaurants)
+random_restaurant = random_value(restaurants)
 
 # # random mode of transportation generator 
-# def random_value(lists):
-#     transportation_mode = (random.choice(transportation_modes))
-#     return transportation_mode
+def random_value(lists):
+    transportation_mode = (random.choice(transportation_modes))
+    return transportation_mode
 
-# random_transportation_mode = random_value(transportation_modes)
+random_transportation_mode = random_value(transportation_modes)
 
 # # random entertainment option generator
 # def random_value(lists):
@@ -48,8 +48,10 @@ random_destination = random_value(destinations)
 
 # random_entertainment_option = random_value(list_of_entertainment_options)
 
-print("Welcome to your day trip generator where we'll help confirm your next desired getaway! If you aren't sure what you'd like to do for your getaway, you've come to the right place!")
-print(f"We have selected {random_destination} for you. Is this good?")
+
+# destination selection
+print("Welcome to your day trip generator where we'll help you confirm your next desired getaway! If you aren't sure what you'd like to do for your getaway, you've come to the right place!")
+print(f"To start, we have selected {random_destination} for you. Is this okay?")
 user_response = input("Enter Yes/No: ")
 
 random_des_one = "Cape Verde"
@@ -81,6 +83,46 @@ while user_response == "No":
         random_destination_selected = random.choice(destinations)
         print(f"Ahhh okay. What about {random_destination_selected}?")
         user_response = input("Enter Yes/No: ")
-    
-print(f"Great, {random_destination} is waiting on you! Next we'll chose your mode of transportation.")
 
+print(f"Great, {random_destination} is waiting on you! Next, we'll chose your mode of transportation.")
+
+# mode of transportation selection  
+print(f"We have selected a {random_transportation_mode} for you. Is this okay?")
+user_response = input("Enter Yes/No: ")
+
+random_trans_one = "Ariplane Flight"
+random_trans_two = "Rental Car"
+random_trans_three = "Train"
+random_trans_four = "Private Jet"
+random_trans_selected = (random_transportation_mode)
+ 
+
+while user_response == "No":
+    if user_response == "Yes":
+        break
+    if random_trans_selected == random_trans_one:
+        transportation_modes.remove(random_trans_selected)
+        random_trans_selected = random.choice(transportation_modes)
+        print(f"Ahhh okay. What about {random_trans_selected}?")
+        user_response = input("Enter Yes/No: ")
+    elif random_trans_selected == random_trans_two:
+        transportation_modes.remove(random_trans_selected)
+        random_trans_selected = random.choice(transportation_modes)
+        print(f"Ahhh okay. What about {random_trans_selected}?")
+        user_response = input("Enter Yes/No: ")
+    elif random_trans_selected == random_trans_three:
+        transportation_modes.remove(random_trans_selected)
+        random_trans_selected = random.choice(transportation_modes)
+        print(f"Ahhh okay. What about {random_trans_selected}?")
+        user_response = input("Enter Yes/No: ")
+    elif random_trans_selected == random_trans_four:
+        transportation_modes.remove(random_trans_selected)
+        random_trans_selected = random.choice(transportation_modes)
+        print(f"Ahhh okay. What about {random_trans_selected}?")
+        user_response = input("Enter Yes/No: ")
+
+
+print(f"Awesome, a {random_destination} is a great way to travel. Next, we'll chose a place for you to dine.")
+
+# restaurant selection
+print(f"We have selected a {random_transportation_mode} for you. Is this okay?")
