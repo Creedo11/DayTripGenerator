@@ -59,26 +59,28 @@ random_des_four = "South Africa"
 random_destination_selected = (random_destination)
 
 while user_response == "No":
+    if user_response == "Yes":
+        break
     if random_destination_selected == random_des_one:
         destinations.remove(random_destination_selected)
-        print(f"Ahhh okay. What about {random.choice(destinations)}?")
+        random_destination_selected = random.choice(destinations)
+        print(f"Ahhh okay. What about {random_destination_selected}?")
         user_response = input("Enter Yes/No: ")
-        continue
     elif random_destination_selected == random_des_two:
         destinations.remove(random_destination_selected)
-        print(f"Ahhh okay. What about {random.choice(destinations)}?")
+        random_destination_selected = random.choice(destinations)
+        print(f"Ahhh okay. What about {random_destination_selected}?")
         user_response = input("Enter Yes/No: ")
-        continue
     elif random_destination_selected == random_des_three:
         destinations.remove(random_destination_selected)
-        print(f"Ahhh okay. What about {random.choice(destinations)}?")
+        random_destination_selected = random.choice(destinations)
+        print(f"Ahhh okay. What about {random_destination_selected}?")
         user_response = input("Enter Yes/No: ")
-        continue
     elif random_destination_selected == random_des_four:
         destinations.remove(random_destination_selected)
-        print(f"Ahhh okay. What about {random.choice(destinations)}?")
+        random_destination_selected = random.choice(destinations)
+        print(f"Ahhh okay. What about {random_destination_selected}?")
         user_response = input("Enter Yes/No: ")
-        continue
-    else:
-        while user_response == "Yes":
-            print(f"Great {random_destination} here you come!")
+    
+print(f"Great, {random_destination} is waiting on you! Next we'll chose your mode of transportation.")
+
