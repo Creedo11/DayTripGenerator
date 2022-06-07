@@ -14,9 +14,11 @@
 
 # list of trip options
 destinations = ["Cape Verde", "Japan", "Las Vegas", "South Africa"]
-restaurants = ["ABS Steakhouse", "ABC Sushi", "ABC Hibachi", "ABC Soul Food Joint"]
+restaurants = ["Steakhouse", "Sushi", "Hibachi", "Soul Food"]
 transportation_modes =["Ariplane Flight", "Rental Car", "Train", "Private Jet"]
 list_of_entertainment_options = ["Sky Diving", "City Tour", "Local Cuisine Cooking Class", "Casino Expierence"]
+
+
 
 import random
 
@@ -27,12 +29,17 @@ def random_value(lists):
 
 random_destination = random_value(destinations)
 
+
+
 # # random restaurant generator
 def random_value(lists):
     restaurant = (random.choice(restaurants)) 
     return restaurant
 
 random_restaurant = random_value(restaurants)
+
+
+
 
 # # random mode of transportation generator 
 def random_value(lists):
@@ -41,12 +48,17 @@ def random_value(lists):
 
 random_transportation_mode = random_value(transportation_modes)
 
-# # random entertainment option generator
-# def random_value(lists):
-#     entertainment_option = (random.choice(list_of_entertainment_options))
-#     return entertainment_option
 
-# random_entertainment_option = random_value(list_of_entertainment_options)
+
+
+# # random entertainment option generator
+def random_value(lists):
+    entertainment_option = (random.choice(list_of_entertainment_options))
+    return entertainment_option
+
+random_entertainment_option = random_value(list_of_entertainment_options)
+
+
 
 
 # destination selection
@@ -59,6 +71,7 @@ random_des_two = "Japan"
 random_des_three = "Las Vegas"
 random_des_four = "South Africa"
 random_destination_selected = (random_destination)
+
 
 while user_response == "No":
     if user_response == "Yes":
@@ -84,7 +97,11 @@ while user_response == "No":
         print(f"Ahhh okay. What about {random_destination_selected}?")
         user_response = input("Enter Yes/No: ")
 
-print(f"Great, {random_destination} is waiting on you! Next, we'll chose your mode of transportation.")
+print(f"Great, {random_destination_selected} is waiting on you! Next, we'll chose your mode of transportation.")
+
+
+
+
 
 # mode of transportation selection  
 print(f"We have selected a {random_transportation_mode} for you. Is this okay?")
@@ -121,8 +138,46 @@ while user_response == "No":
         print(f"Ahhh okay. What about {random_trans_selected}?")
         user_response = input("Enter Yes/No: ")
 
+print(f"Awesome, a {random_trans_selected} is a great way to travel. Next, we'll chose a place for you to dine.")
 
-print(f"Awesome, a {random_destination} is a great way to travel. Next, we'll chose a place for you to dine.")
+
+
+
 
 # restaurant selection
-print(f"We have selected a {random_transportation_mode} for you. Is this okay?")
+print(f"We have selected a {random_restaurant} for you. Is this okay?")
+user_response = input("Enter Yes/No: ")
+
+random_res_one = "Steakhouse"
+random_res_two = "Sushi"
+random_res_three = "Hibachi"
+random_res_four = "Soul Food"
+random_res_selected = (random_restaurant)
+
+
+while user_response == "No":
+    if user_response == "Yes":
+        break
+    if random_res_selected == random_res_one:
+        restaurants.remove(random_res_selected)
+        random_res_selected = random.choice(restaurants)
+        print(f"Ahhh okay. What about {random_res_selected}?")
+        user_response = input("Enter Yes/No: ")
+    elif random_res_selected == random_res_two:
+        restaurants.remove(random_res_selected)
+        random_res_selected = random.choice(restaurants)
+        print(f"Ahhh okay. What about {random_res_selected}?")
+        user_response = input("Enter Yes/No: ")
+    elif random_res_selected == random_res_three:
+        restaurants.remove(random_res_selected)
+        random_res_selected = random.choice(restaurants)
+        print(f"Ahhh okay. What about {random_res_selected}?")
+        user_response = input("Enter Yes/No: ")
+    elif random_res_selected == random_res_four:
+        restaurants.remove(random_res_selected)
+        random_res_selected = random.choice(restaurants)
+        print(f"Ahhh okay. What about {random_res_selected}?")
+        user_response = input("Enter Yes/No: ")
+
+print(f"Nice! The locals always suggest a good {random_res_selected} restaurant. Lastly, we'll chose an activity for you to enjoy.")
+
